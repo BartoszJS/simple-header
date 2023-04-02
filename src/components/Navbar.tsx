@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 const Navbar = () => {
-  const [showPlayers, setShowPlayers] = useState(true);
+  const [showPlayers, setShowPlayers] = useState(false);
   const [showFastestPlayers, setShowFastestPlayers] = useState(false);
-  const [showStrongestPlayers, setShowStrongestPlayers] = useState(true);
+  const [showStrongestPlayers, setShowStrongestPlayers] = useState(false);
   const handleMouseOver = () => {
     setShowPlayers(true);
   };
@@ -31,7 +31,7 @@ const Navbar = () => {
           <li onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
             Players
             {showPlayers && (
-              <div className='absolute w-[200px] border'>
+              <div className='absolute w-[200px] border bg-white'>
                 <ul className='flex flex-col gap-2'>
                   <li
                     onMouseOver={handleMouseOverFastest}
@@ -39,7 +39,7 @@ const Navbar = () => {
                   >
                     The fastest
                     {showFastestPlayers && (
-                      <div className='absolute border right-[197px] top-0'>
+                      <div className='bg-white absolute border right-[197px] top-0'>
                         <div className='absolute right-0 h-4 w-4 top-1 border-8 border-transparent border-r-black'></div>
                         <ul className='flex flex-col pr-3 gap-2'>
                           <li>Mbappe</li>
@@ -66,7 +66,7 @@ const Navbar = () => {
                     {showStrongestPlayers && (
                       <div className='absolute border right-[197px] top-8'>
                         <div className='absolute right-0 h-4 w-4 top-1 border-8 border-transparent border-r-black'></div>
-                        <ul className='flex flex-col pr-3 gap-2'>
+                        <ul className='bg-white flex flex-col pr-3 gap-2'>
                           <li>Benteke</li>
                           <li>Benteke</li>
                           <li>Benteke</li>
